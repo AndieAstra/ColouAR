@@ -1,0 +1,49 @@
+/* Container to hold all content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;  /* Adjust space from the top */
+}
+
+/* Title section styling */
+.title {
+  margin-bottom: 20px;  /* Space between title and paragraph */
+}
+
+/* Image container styling */
+.image-container {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  max-width: 400px;  /* Set max-width for the image */
+  width: 50%;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 75%;
+  height: auto;
+}
+
+/* Button styling */
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+/* Iframe container styling */
+.iframe-container {
+  width: 100%;  /* Adjust width to your liking */
+  margin-top: 20px;
+}

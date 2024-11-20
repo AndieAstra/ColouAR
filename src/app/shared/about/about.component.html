@@ -1,0 +1,24 @@
+<!-- about.component.html -->
+<div class="about-container">
+  <section class="about-section">
+    <h1>About ColouAR</h1>
+    <p>Howdy! I'm Andie Astra. I've been teaching Augmented Reality workshops since 2018.</p>
+    <p>Below are a few examples of past work I've built. This site is still being developed,</p>
+    <p>but if you would like to reach out please do so on LinkedIn.</p>
+
+    <a class="dropdown-link" href="https://www.linkedin.com/in/andrés-astra-537665a9/">Let's connect!</a>
+
+  </section>
+
+  <section class="gallery-section">
+    <h2>Our Gallery</h2>
+    <div class="gallery">
+      @for(image of images; track image) {
+        <div class="gallery-item">
+          <img [src]="image.src" [alt]="image.alt" />
+          <p class="gallery-text">{{ image.text }}</p>
+        </div>
+      }
+    </div>
+  </section>
+</div>

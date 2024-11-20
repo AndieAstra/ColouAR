@@ -1,0 +1,62 @@
+<nav class="navbar">
+  <div class="navbar-header">
+    <ul class="navbar-nav">
+
+      <!-- Home Link -->
+      <li class="nav-item">
+        <a class="nav-link header-link" routerLink="/home">Home</a>
+      </li>
+
+      <!-- About -->
+      <li class="nav-item">
+        <a class="nav-link header-link" routerLink="/about">About</a>
+      </li>
+
+      <!-- tutorial -->
+      <li class="nav-item">
+        <button class="header-link" routerLink="/tutorial">0. Tutorial</button>
+      </li>
+
+      <!-- Service Berry Dropdown -->
+      <li class="nav-item">
+        <button class="header-link" (click)="toggleDropdown('serviceberry')">
+          1. Service Berry
+        </button>
+        <ul class="dropdown-menu">
+          @if (isDropdownOpen('serviceberry')) {
+            <li>
+              <a class="dropdown-link" routerLink="/serviceberry/berry-ar">Berry AR</a>
+            </li>
+            <li>
+              <a class="dropdown-link" routerLink="/serviceberry/berry-web">Berry Web</a>
+            </li>
+            <li>
+              <a class="dropdown-link" href="assets/marker_pages/Berry.png" download>Download Berry Coloring Page</a>
+            </li>
+
+          }
+        </ul>
+      </li>
+
+      <!-- Pizza Dropdown -->
+      <li class="nav-item">
+        <button class="header-link" (click)="toggleDropdown('pizza')">
+          2. Pizza
+        </button>
+        <ul class="dropdown-menu">
+          @if (isDropdownOpen('pizza')) {
+            <li>
+              <a class="dropdown-link" routerLink="/pizza/pizza-ar">Pizza AR</a>
+            </li>
+            <li>
+              <a class="dropdown-link" routerLink="/pizza/pizza-web">Pizza Web</a>
+            </li>
+            <li>
+              <a class="dropdown-link" href="assets/marker_pages/Pizza.png" download>Download Pizza Coloring Page</a>
+            </li>
+          }
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

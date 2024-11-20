@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+
+.ar-container {
+  position: relative;
+  margin-left: 0;
+  height: 100%;
+}
+
+.buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  z-index: 101;
+}
+
+.debug {
+  position: absolute;
+  top: 80px; /* Adjust as needed to position below the buttons */
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 101;
+  font-size: smaller;
+}
+
+canvas {
+  display: block;
+  width: 300px; /* Adjust width */
+  height: 200px; /* Adjust height */
+  border: 1px solid #ccc; /* Optional border */
+}
+
+.floating {
+  margin-top: 60px;
+}

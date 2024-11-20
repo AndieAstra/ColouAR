@@ -1,0 +1,15 @@
+{
+  "projectId": "prj_h2UD2mKOZOHPLqZZE35SnKmChf1N",
+  "orgId": "team_QMtLgXNn0KAgasqqNryZwWFF",
+  "settings": {
+    "createdAt": 1721172293140,
+    "framework": "angular",
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "20.x"
+  }
+}

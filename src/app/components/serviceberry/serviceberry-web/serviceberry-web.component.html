@@ -1,0 +1,15 @@
+<div class="content">
+  <h3>Service Berry</h3>
+
+  <!-- Zoom In / Zoom Out / Save Screenshot Buttons Container -->
+  <div class="button-container">
+    <p>Rotate = R MOUSE | Grab = L MOUSE</p>
+    <button class="button" (click)="zoomIn()">Zoom In</button>
+    <button class="button" (click)="zoomOut()">Zoom Out</button>
+    <button class="button save-screenshot" (click)="saveScreenshot()">Save Screenshot</button>  <!-- Save Screenshot button -->
+  </div>
+
+  <div #rendererContainer id="webgl-output"></div>
+
+  <input type="file" (change)="onFileSelected($event)" />
+</div>

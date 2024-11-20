@@ -1,0 +1,63 @@
+<div class="content">
+  <h3>ColouAR Tutorial</h3>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar">
+    <div class="progress" [style.width.%]="progress">{{ progress }}%</div>
+  </div>
+
+  <!-- Steps -->
+  @if (currentStep === 1) {
+    <div>
+      <h4>Welcome! Let's begin by exploring site navigation. </h4>
+      <p>The ColouAR website hosts multiple AR coloring pages as well as tutorials on how to develop your own AR coloring pages.</p>
+    </div>
+  }
+
+    @if (currentStep === 2) {
+      <div>
+        <p>Let's start by uploading a 3D model (.glb, .gltf)</p>
+        <button class="button" (click)="downloadFile()">Download Test Model</button>
+        <br><br>
+        <input type="file" (change)="onFileSelected($event, 'model')" accept=".glb, .gltf" />
+        @if (modelUploaded) {
+          <p>Model uploaded successfully!</p>
+        }
+      </div>
+    }
+
+  @if (currentStep === 3) {
+    <div>
+      @if (modelUploaded) {
+        <p>Great job! Now let's upload a texture to "color" the model.</p>
+        <button class="button" (click)="downloadTexture()">Download Test Texture</button>
+        <br><br>
+        <input type="file" (change)="onFileSelected($event, 'texture')" />
+        @if (textureUploaded) {
+          <p>Texture uploaded successfully!</p>
+        }
+      }
+    </div>
+  }
+
+  @if (currentStep === 4) {
+    <div>
+      <h4>Congratulations!</h4>
+      <p>You successfully completed the tutorial.</p>
+      <button class="nav-link header-link" routerLink="/serviceberry/berry-ar">Explore the site</button>
+    </div>
+  }
+
+  <!-- Navigation Buttons -->
+  <div class="navigation-buttons">
+    <button (click)="prevStep()" [disabled]="currentStep === 1">Previous</button>
+
+@if (currentStep < 4) {
+    <button (click)="nextStep()" [disabled]="!canProceed()"> Next </button>
+  }
+  </div>
+
+
+  <!-- WebGL Output -->
+  <div id="webgl-output"></div>
+</div>

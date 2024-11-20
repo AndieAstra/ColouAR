@@ -1,0 +1,68 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  padding-left: 20px;
+}
+
+/* Navbar list styles */
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin: 10px 0;
+}
+
+/* General link styles */
+.nav-link {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+/* Header links (larger font) */
+.header-link {
+  font-size: 1em; /* Larger font size */
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.header-link:hover {
+  color: #ddd;
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444;
+}
+
+.dropdown-menu .dropdown-link {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  font-size: 1em; /* Smaller font for dropdown items */
+}
+
+.dropdown-menu .dropdown-link:hover {
+  background-color: #555;
+}

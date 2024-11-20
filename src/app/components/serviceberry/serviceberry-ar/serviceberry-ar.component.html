@@ -1,0 +1,30 @@
+<div class="ar-container">
+<div class="floating">
+    <!-- Button Container -->
+    <div class="buttons">
+      <button id="model-button">Load Pre-Colored Model</button>
+    </div>
+
+    <!-- Debug Container -->
+    <div class="debug">
+      <!-- <p>Camera Window</p>
+      <canvas id="screenshotCanvas"></canvas> -->
+      <p><b>Texture Wrapping</b></p>
+      <p>*Make sure the full page is in view*</p>
+      <canvas id="resultCanvas"></canvas>
+      <button id="render-button">Color Me!</button>
+    </div>
+</div>
+
+  <!-- 3D Scene -->
+  <a-scene mindar-image="imageTargetSrc: assets/Berry.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-camera
+      position="0 1.6 0"
+      look-controls="enabled: false"
+      cursor="fuse: false; rayOrigin: mouse;"
+      raycaster="near: 10; far: 10000; objects: .clickable"></a-camera>
+    <a-entity mindar-image-target="targetIndex: 0">
+      <a-entity id="example-3D" gltf-model="assets/models/Berry.glb" animation-mixer="clip: *;" class="clickable" position="0 0 0" rotation="0 0 0" scale="0.05 0.05 0.05"></a-entity>
+    </a-entity>
+  </a-scene>
+</div>
